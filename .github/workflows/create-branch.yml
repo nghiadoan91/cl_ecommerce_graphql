@@ -24,6 +24,7 @@ jobs:
 
   setup_gen_files:
     name: Setup Generate Files
+     runs-on: ubuntu-latest
     steps:
       - uses: dart-lang/setup-dart@v1
       - run: rm .gitignore
@@ -32,6 +33,7 @@ jobs:
   
   commit_push:
     name: Commit Push
+     runs-on: ubuntu-latest
     steps:
       - name: Commit Push
         uses: actions-js/push@master
