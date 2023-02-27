@@ -22,15 +22,11 @@ jobs:
         with:
           branch: "release/${{ env.RELEASE_VERSION }}"
 
-  remove_gitignore:
-    name: Remove File
-    steps:
-      - uses: rm .gitignore
-  
   setup_gen_files:
     name: Setup Generate Files
     steps:
       - uses: dart-lang/setup-dart@v1
+      - run: rm .gitignore
       - run: dart pub get
       - run: dart run build_runner build --delete-conflicting-outputs
   
