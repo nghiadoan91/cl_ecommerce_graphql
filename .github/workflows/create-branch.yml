@@ -35,8 +35,11 @@ jobs:
       - uses: dart-lang/setup-dart@v1
       - run: dart pub get
       - run: dart run build_runner build --delete-conflicting-outputs
-      - name: Commit & Push changes
-      uses: actions-js/push@master
+  
+  commit_push:
+    name: Commit Push
+    steps:
+      - uses: actions-js/push@master
       with:
         github_token: ${{ github.token }}
         branch: "release/${{ env.RELEASE_VERSION }}"
