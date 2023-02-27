@@ -39,10 +39,11 @@ jobs:
   commit_push:
     name: Commit Push
     steps:
-      - uses: actions-js/push@master
-      with:
-        github_token: ${{ github.token }}
-        branch: "release/${{ env.RELEASE_VERSION }}"
+      - name: Commit Push
+        uses: actions-js/push@master
+        with:
+          github_token: ${{ github.token }}
+          branch: "release/${{ env.RELEASE_VERSION }}"
   
 
 
