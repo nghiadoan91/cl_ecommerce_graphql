@@ -16,7 +16,7 @@ jobs:
           GITHUB_TOKEN: ${{ github.token }}
         with:
           branch: "release/${{ env.RELEASE_VERSION }}"
-      - uses: dart-lang/setup-dart@v1
+      - uses: flutter-actions/setup-flutter@v2
       - run: rm -f .gitignore
       - run: flutter pub get
       - run: flutter run build_runner build --delete-conflicting-outputs
