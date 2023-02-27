@@ -18,8 +18,8 @@ jobs:
           branch: "release/${{ env.RELEASE_VERSION }}"
       - uses: dart-lang/setup-dart@v1
       - run: rm -f .gitignore
-      - run: dart pub get
-      - run: dart run build_runner build --delete-conflicting-outputs
+      - run: flutter pub get
+      - run: flutter run build_runner build --delete-conflicting-outputs
       - name: Commit Push
         uses: actions-js/push@master
         with:
