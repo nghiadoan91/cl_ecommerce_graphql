@@ -4,7 +4,8 @@ on:
   release:
     types: [published]
 jobs:
-  Explore-GitHub-Actions:
+  create_release_branch:
+    name: Create Branch
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
@@ -12,7 +13,7 @@ jobs:
         run: echo "RELEASE_VERSION=${GITHUB_REF}" >> $GITHUB_ENV
       
       - name: create branch
-      uses: peterjgrainger/action-create-branch@v2.2.0
+      - uses: peterjgrainger/action-create-branch@v2.2.0
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
