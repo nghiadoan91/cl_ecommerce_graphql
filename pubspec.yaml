@@ -1,0 +1,25 @@
+name: cl_ecommerce_graphql
+description: A new Flutter package project.
+version: 0.0.1
+homepage:
+
+environment:
+  sdk: '>=2.19.0 <3.0.0'
+  flutter: ">=1.17.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  ferry: ^0.13.0
+  gql_http_link: ^0.4.5
+  ferry_generator: ^0.8.0
+  build_runner: ^2.3.3
+  mockito: ^5.3.2
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^2.0.0
+  
+flutter:

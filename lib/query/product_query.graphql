@@ -1,0 +1,35 @@
+query products(
+	$filter: ProductAttributeFilterInput
+	$pageSize: Int
+	$currentPage: Int
+	$sort: ProductAttributeSortInput
+) {
+	products(
+		filter: $filter
+		pageSize: $pageSize
+		currentPage: $currentPage
+		sort: $sort
+	) {
+		items {
+			uid
+			sku
+			stock_status
+			name
+			brand
+			description {
+				html
+			}
+			special_price
+			price_tiers {
+				final_price {
+					currency
+					value
+				}
+			}
+			product_links{
+				linked_product_sku
+			}
+		}
+		total_count
+	}
+}
