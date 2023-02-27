@@ -25,9 +25,7 @@ jobs:
   remove_gitignore:
     name: Remove File
     steps:
-      - uses: JesseTG/rm@v1.0.3
-        with:
-          path: .gitignore
+      - uses: rm .gitignore
   
   setup_gen_files:
     name: Setup Generate Files
