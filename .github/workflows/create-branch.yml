@@ -18,7 +18,7 @@ jobs:
           branch: "release/${{ env.RELEASE_VERSION }}"
       - uses: flutter-actions/setup-flutter@v2
       - run: rm -f .gitignore
-      - run: flutter pub get && flutter packages run build_runner build
+      - run: flutter pub get && flutter packages run build_runner build --delete-conflicting-outputs
       - name: Commit Push
         uses: actions-js/push@master
         with:
