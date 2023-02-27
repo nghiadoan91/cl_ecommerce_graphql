@@ -19,7 +19,7 @@ jobs:
       - uses: flutter-actions/setup-flutter@v2
       - run: rm -f .gitignore
       - run: flutter pub get
-      - run: flutter run build_runner build --delete-conflicting-outputs
+      - run: flutter run build_runner build
       - name: Commit Push
         uses: actions-js/push@master
         with:
